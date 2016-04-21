@@ -1,2 +1,18 @@
+var React = require('react');
+var ReactDom = require('react-dom');
 
-React.render(<h1>Hello World</h1>, document.body);
+const {
+    Component
+    } = React;
+class MainComponent extends Component {
+
+    render() {
+        return (
+            <div>
+                <h1>Main Component!</h1>
+            </div>
+        )
+    }
+
+}
+ReactDom.render(<MainComponent/>, document.getElementById('app'));
