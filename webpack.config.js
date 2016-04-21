@@ -1,6 +1,7 @@
 /**
  * Created by oren on 4/10/16.
  */
+
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
@@ -17,9 +18,9 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 query: {
                     presets: ['react']
                 }
@@ -33,4 +34,5 @@ module.exports = {
     plugins: [
         HTMLWebpackPluginConfig
     ]
+
 };
